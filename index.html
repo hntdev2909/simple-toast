@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Practice Using BEM</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+			integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div id="toast"></div>
+		<div class="container">
+			<h2 class="title-content">Create Toast Using BEM</h2>
+			<div id="btn">
+				<div onclick="showToast('success')" class="btn btn--success">
+					Show Toast Success
+				</div>
+				<div onclick="showToast('info')" class="btn btn--info">
+					Show Toast Info
+				</div>
+				<div onclick="showToast('warn')" class="btn btn--warn">
+					Show Toast Warning
+				</div>
+				<div onclick="showToast('error')" class="btn btn--error">
+					Show Toast Error
+				</div>
+			</div>
+		</div>
+		<script src="./main.js"></script>
+	</body>
+</html>

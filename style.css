@@ -1,0 +1,187 @@
+/* Commons */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+	--success: #47d764;
+	--info: #2f86eb;
+	--warn: #ffc021;
+	--error: #ff623d;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+body {
+	background-color: #f6f6f7;
+}
+
+.title-content {
+	font-family: Roboto;
+	font-weight: 400;
+	font-size: 45px;
+	text-align: center;
+	margin-bottom: 200px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+/* Toast */
+
+#toast {
+	position: absolute;
+	top: 0;
+	right: 32px;
+}
+
+.toast {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: 4px 1px 11px 6px rgb(0 0 0 / 4%);
+	background-color: rgba(255, 255, 255, 1);
+	border-left: 5px solid;
+	border-radius: 3px;
+	min-width: 400px;
+	max-width: 500px;
+	padding: 16px 0;
+	margin-top: 32px;
+	animation: slideIn ease 0.3s, fadeOut linear 1s 3s forwards;
+	transition: all linear 0.6s;
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeOut {
+	to {
+		opacity: 0;
+	}
+}
+
+.toast__msg,
+.toast__title {
+	padding: 0;
+	margin: 0;
+}
+
+.toast__icon {
+	font-size: 26px;
+}
+.toast__body {
+	flex-grow: 1;
+}
+.toast__title {
+	font-size: 16px;
+}
+.toast__msg {
+	font-size: 15px;
+}
+
+.toast__close {
+	font-size: 20px;
+	cursor: pointer;
+	transition: linear 0.15s;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.toast__icon,
+.toast__close {
+	padding: 10px 18px;
+}
+
+.toast__close:hover {
+	transform: scale(1.3);
+	color: #000;
+}
+
+.toast--success .toast__icon {
+	color: var(--success);
+}
+
+.toast--success {
+	border-color: var(--success);
+}
+
+.toast--info .toast__icon {
+	color: var(--info);
+}
+
+.toast--info {
+	border-color: var(--info);
+}
+
+.toast--warn .toast__icon {
+	color: var(--warn);
+}
+
+.toast--warn {
+	border-color: var(--warn);
+}
+
+.toast--error .toast__icon {
+	color: var(--error);
+}
+
+.toast--error {
+	border-color: var(--error);
+}
+
+/* Button */
+#btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn {
+	color: white;
+	display: inline-block;
+	padding: 9px 18px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: linear 0.2s;
+	margin: 0 10px;
+}
+
+.btn:hover {
+	opacity: 0.8;
+	box-shadow: 4px 1px 11px 6px rgb(0 0 0 / 4%);
+	transform: scale(1.07);
+}
+
+.btn--success {
+	background-color: var(--success);
+}
+
+.btn--info {
+	background-color: var(--info);
+}
+
+.btn--warn {
+	background-color: var(--warn);
+}
+
+.btn--error {
+	background-color: var(--error);
+}
